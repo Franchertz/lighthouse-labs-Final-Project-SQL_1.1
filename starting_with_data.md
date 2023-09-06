@@ -14,7 +14,11 @@ ORDER BY total_revenue DESC
 LIMIT 10
 ;
 ```
-
+```SQL
+UPDATE all_sessions
+SET city = 'Other'
+WHERE city IS NULL OR city = '(not set)';
+```
 #### Answer: 
 A city in USA city unknown had the largest total revenue just over 6million
 
