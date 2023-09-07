@@ -1,7 +1,9 @@
 Answer the following questions and provide the SQL queries used to find the answer.
 
     
-## Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
+### Question 1: 
+
+Which cities and countries have the highest level of transaction revenues on the site?
 
 
 ```SQL Queries:
@@ -27,7 +29,9 @@ City is not available in Dataset under Country column is United States with a to
 
 
 
-## Question 2: What is the average number of products ordered from visitors in each city and country?**
+### Question 2: 
+
+What is the average number of products ordered from visitors in each city and country?
 
 
 ```SQL Queries:
@@ -50,7 +54,9 @@ We see an unknown city in the United Stated with the highest average of 10.58, f
 
 
 
-## Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
+### Question 3: 
+
+Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?
 
 
 ```SQL Queries:
@@ -79,7 +85,9 @@ The result of this query will give you a detailed breakdown of product category 
 
 
 
-## Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+### Question 4: 
+
+What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?
 
 
 ```SQL Queries:
@@ -113,7 +121,9 @@ The results are ordered by country and city, allowing us to discern trends in th
 
 
 
-## Question 5: Can we summarize the impact of revenue generated from each city/country?**
+### Question 5: 
+
+Can we summarize the impact of revenue generated from each city/country?
 
 ```SQL Queries:
 SELECT		city,
