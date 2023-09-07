@@ -1,4 +1,5 @@
-Question 1: 
+### Question 1: 
+
 What are the top countries and cities by total transaction revenue?
 
 ```SQL Queries:
@@ -16,12 +17,14 @@ LIMIT 10
 ```
 
 #### Answer: 
+
 A city in USA city unknown had the largest total revenue just over 6million
 
 
 
 
-## Question 2: 
+### Question 2: 
+
 What are the most viewed pages and their associated revenue
 
 ```SQL Queries:
@@ -37,11 +40,13 @@ ORDER BY		total_pageviews DESC
 Limit 5;
 ```
 #### Answer:
+
 The office, Nest-USA and "Men's T-Shirts | Apparel | Google Merchandise Store" had the largest pageview with over 300,000 views and also generated 9million, 8million and 9million in revenue respectively.
 
 
 
-## Question 3: 
+### Question 3: 
+
 How did studying visitor behavior metrics, such as session duration, page views, and search keywords
 
 ```SQL Queries:
@@ -56,6 +61,7 @@ ORDER BY	avg_timeonsite DESC
 ;
 ```
 #### Answer:
+
 A thorough examination of visitor behavior metrics, which encompass session duration, page views, and search keywords, yielded invaluable insights into the way visitors engaged with our website. Through the scrutiny of these metrics, we obtained a deeper comprehension of user preferences and behaviors, enabling us to pinpoint areas in need of enhancement within the website's user experience. 
 
 For instance, we could readily pinpoint pages exhibiting high bounce rates or low engagement and subsequently optimize their content to render them more enticing to our visitors. Moreover, the analysis of search keywords unveiled popular topics of interest, empowering us to craft targeted content that deeply resonates with our audience.
@@ -64,16 +70,4 @@ In summary, this data-centric approach culminated in improvements across the web
 
 
 
-Question 4: 
 
-SQL Queries:
-
-Answer:
-
-
-
-Question 5: 
-
-SQL Queries:
-
-Answer:
