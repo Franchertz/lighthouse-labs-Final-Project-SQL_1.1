@@ -1,10 +1,10 @@
 Answer the following questions and provide the SQL queries used to find the answer.
 
     
-**Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
+## Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
 
-SQL Queries:
+```SQL Queries:
 SELECT 
   COALESCE(city, 'Other') AS city, 
   COALESCE(country, 'Other') AS country, 
@@ -18,19 +18,19 @@ WHERE
   AND country <> ''
 ORDER BY total_revenue_numeric DESC
 LIMIT 1;
+```
 
 
-
-Answer:
+#### Answer:
 City is not available in Dataset under Country column is United States with a total transaction of 1015480000
 
 
 
 
-**Question 2: What is the average number of products ordered from visitors in each city and country?**
+## Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
-SQL Queries:
+```SQL Queries:
 SELECT 
   city, 
   country, 
@@ -40,20 +40,20 @@ WHERE productquantity IS NOT NULL
 GROUP BY city, country
 ORDER BY average_products_ordered DESC
 limit 5;
+```
 
 
-
-Answer:
+#### Answer:
 We see an unknown city in the United Stated with the highest average of 10.58, followed by Madrid in Spain with an average of 10.00
 
 
 
 
 
-**Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
+## Question 3: Is there any pattern in the types (product categories) of products ordered from visitors in each city and country?**
 
 
-SQL Queries:
+```SQL Queries:
 SELECT 
   COALESCE(NULLIF(city, ''), 'Other') AS city, 
   COALESCE(NULLIF(country, ''), 'Other') AS country, 
@@ -69,20 +69,20 @@ GROUP BY city, country, v2productcategory
 HAVING COUNT(*) > 10
 ORDER BY country, city, order_count DESC
 ;
+```
 
 
-
-Answer:
+#### Answer:
 The result of this query will give you a detailed breakdown of product category purchases for each city within each country, allowing you to analyze patterns in purchases across different locations.
 
 
 
 
 
-**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+## Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
-SQL Queries:
+```SQL Queries:
 WITH ranked_products AS (
   SELECT 
     COALESCE(NULLIF(city, ''), 'Other') AS city, 
@@ -103,19 +103,19 @@ FROM ranked_products
 WHERE ranked = 1
 ORDER BY country, city
 ;
+```
 
 
-
-Answer:
+#### Answer:
 The results are ordered by country and city, allowing us to discern trends in the most sought-after products across various regions. This arrangement offers valuable insights into customer preferences, which can inform our marketing efforts, inventory management decisions, and product strategies. 
 
 
 
 
 
-**Question 5: Can we summarize the impact of revenue generated from each city/country?**
+## Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
-SQL Queries:
+```SQL Queries:
 SELECT		city,
 			country,
 			SUM(totaltransactionrevenue::NUMERIC) AS total_revenue,
@@ -127,10 +127,10 @@ AND			city IS NOT NULL AND city != '(not set)'
 GROUP BY	city, country,v2productname
 ORDER BY	total_revenue DESC
 ;
+```
 
 
-
-Answer:
+#### Answer:
 We can summarize the revenue impact from each city and country by aggregating
 the generated revenue figures. This summary allows us to understand the financial contributions of different regions, facilitating strategic decision-making and resource allocation to maximize our business outcomes.
 
